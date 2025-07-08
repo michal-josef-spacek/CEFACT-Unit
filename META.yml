@@ -27,6 +27,7 @@ requires:
   Data::CEFACT::Unit: 0
   File::Share: 0
   IO::File: 0
+  List::Util: 1.33
   Text::CSV_XS: 0
   perl: 5.6.2
 resources:

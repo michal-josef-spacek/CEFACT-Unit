@@ -7,6 +7,7 @@ use Class::Utils qw(set_params);
 use Data::CEFACT::Unit;
 use File::Share ':all';
 use IO::File;
+use List::Util 1.33 qw(any);
 use Text::CSV_XS;
 
 our $VERSION = 0.01;
@@ -29,6 +30,19 @@ sub new {
 	}
 
 	return $self;
+}
+
+sub check_common_code {
+	my ($self, $common_code) = @_;
+
+	my $ret;
+	if (any { $_->common_code eq $common_code } @{$self->{'units'}}) {
+		$ret = 1;
+	} else {
+		$ret = 0;
+	}
+
+	return $ret;
 }
 
 sub _init {
