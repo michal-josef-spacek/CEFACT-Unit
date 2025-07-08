@@ -8,6 +8,7 @@ use Data::CEFACT::Unit;
 use File::Share ':all';
 use IO::File;
 use List::Util 1.33 qw(any);
+use Mo::utils 0.21 qw(check_array_object);
 use Text::CSV_XS;
 
 our $VERSION = 0.01;
@@ -25,6 +26,7 @@ sub new {
 	set_params($self, @params);
 
 	# Init all units.
+	check_array_object($self, 'units', 'Data::CEFACT::Unit', 'UN/CEFACT unit');
 	if (! @{$self->{'units'}}) {
 		$self->_init;
 	}
@@ -134,6 +136,17 @@ Returns instance of object.
 Check UN/CEFACT unit common code.
 
 Returns bool (0/1).
+
+=head1 ERRORS
+
+ new():
+         From Mo::utils::check_array_object():
+                 Parameter 'units' must be a array.
+                         Value: %s
+                         Reference: %s
+                 UN/CEFACT isn't 'Data::CEFACT::Unit' object.
+                         Value: %s
+                         Reference: %s
 
 =head1 EXAMPLE
 
