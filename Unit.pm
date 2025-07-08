@@ -140,6 +140,8 @@ Returns bool (0/1).
 =head1 ERRORS
 
  new():
+         From Class::Utils::set_params():
+                 Unknown parameter '%s'.
          From Mo::utils::check_array_object():
                  Parameter 'units' must be a array.
                          Value: %s
