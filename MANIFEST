@@ -19,6 +19,7 @@ README
 share/code-list.csv
 t/CEFACT-Unit/01-use.t
 t/CEFACT-Unit/02-version.t
+t/CEFACT-Unit/03-new.t
 Unit.pm
 xt/CEFACT-Unit/01-pod_coverage.t
 xt/CEFACT-Unit/02-pod.t
