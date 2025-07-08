@@ -1,4 +1,5 @@
 Changes
+examples/check_unit_common_code.pl
 inc/Module/Install.pm
 inc/Module/Install/AuthorRequires.pm
 inc/Module/Install/AuthorTests.pm
@@ -17,6 +18,7 @@ MANIFEST			This list of files
 META.yml
 README
 share/code-list.csv
+SIGNATURE
 t/CEFACT-Unit/01-use.t
 t/CEFACT-Unit/02-version.t
 t/CEFACT-Unit/03-new.t
