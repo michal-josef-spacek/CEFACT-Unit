@@ -1,9 +1,9 @@
 use strict;
 use warnings;
 
-use Cefact::CommonCode;
+use CEFACT::Unit;
 use Test::More 'tests' => 2;
 use Test::NoWarnings;
 
 # Test.
-is($Cefact::CommonCode::VERSION, 0.01, 'Version.');
+is($CEFACT::Unit::VERSION, 0.01, 'Version.');

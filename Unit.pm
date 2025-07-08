@@ -1,4 +1,4 @@
-package Cefact::CommonCode;
+package CEFACT::Unit;
 
 use strict;
 use warnings;

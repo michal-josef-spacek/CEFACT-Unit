@@ -7,8 +7,8 @@ use Test::NoWarnings;
 BEGIN {
 
 	# Test.
-	use_ok('Cefact::CommonCode');
+	use_ok('CEFACT::Unit');
 }
 
 # Test.
-require_ok('Cefact::CommonCode');
+require_ok('CEFACT::Unit');
