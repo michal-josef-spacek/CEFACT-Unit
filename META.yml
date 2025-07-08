@@ -18,6 +18,7 @@ meta-spec:
 name: CEFACT-Unit
 no_index:
   directory:
+    - examples
     - inc
     - share
     - t

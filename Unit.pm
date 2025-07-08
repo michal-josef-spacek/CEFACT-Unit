@@ -91,3 +91,107 @@ sub _init {
 1;
 
 __END__
+
+=pod
+
+=encoding utf8
+
+=head1 NAME
+
+CEFACT::Unit - CEFACT unit handling.
+
+=head1 SYNOPSIS
+
+ use CEFACT::Unit;
+
+ my $obj = CEFACT::Unit->new(%params);
+ my $bool = $obj->check_common_code($unit_common_code);
+
+=head1 METHODS
+
+=head2 C<new>
+
+ my $obj = CEFACT::Unit->new(%params);
+
+Constructor.
+
+=over 8
+
+=item * C<units>
+
+List of units in L<Data::CEFACT::Unit> instances.
+
+Default value is [].
+
+=back
+
+Returns instance of object.
+
+=head2 C<check_common_code>
+
+ my $bool = $obj->check_common_code($unit_common_code);
+
+Check UN/CEFACT unit common code.
+
+Returns bool (0/1).
+
+=head1 EXAMPLE
+
+=for comment filename=check_unit_common_code.pl
+
+ use strict;
+ use warnings;
+
+ use CEFACT::Unit;
+
+ if (@ARGV < 1) {
+         print STDERR "Usage: $0 unit_common_code\n";
+         exit 1;
+ }
+ my $unit_common_code = $ARGV[0];
+
+ # Object.
+ my $obj = CEFACT::Unit->new;
+
+ # Check unit common code.
+ my $bool = $obj->check_common_code($unit_common_code);
+
+ # Print out.
+ print "Unit '$unit_common_code' is ".($bool ? 'valid' : 'invalid')."\n";
+
+ # Output for 'KGM':
+ # Unit 'KGM' is valid
+
+ # Output for 'XXX':
+ # Unit 'XXX' is invalid
+
+=head1 DEPENDENCIES
+
+L<Class::Utils>,
+L<Data::CEFACT::Unit>,
+L<File::Share>,
+L<IO::File>,
+L<List::Util>,
+L<Text::CSV_XS>.
+
+=head1 REPOSITORY
+
+L<https://github.com/michal-josef-spacek/CEFACT-Unit>
+
+=head1 AUTHOR
+
+Michal Josef Špaček L<mailto:skim@cpan.org>
+
+L<http://skim.cz>
+
+=head1 LICENSE AND COPYRIGHT
+
+© 2024-2025 Michal Josef Špaček
+
+BSD 2-Clause License
+
+=head1 VERSION
+
+0.01
+
+=cut
