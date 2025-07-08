@@ -11,7 +11,7 @@ use List::Util 1.33 qw(any);
 use Mo::utils 0.21 qw(check_array_object);
 use Text::CSV_XS;
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 sub new {
 	my ($class, @params) = @_;
@@ -207,6 +207,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.01
+0.02
 
 =cut
