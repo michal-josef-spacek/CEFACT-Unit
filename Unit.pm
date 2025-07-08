@@ -62,9 +62,6 @@ sub _init {
 	$fh->open($csv_file, 'r');
 	my $i = 0;
 	while (my $columns_ar = $csv->getline($fh)) {
-		if (! @{$columns_ar}) {
-			last;
-		}
 		$i++;
 
 		# Header.
