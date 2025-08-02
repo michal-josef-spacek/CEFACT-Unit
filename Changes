@@ -1,4 +1,5 @@
 0.02
+ - Move check_array_object() to Mo::utils::Array.
 
 0.01 2025-07-09T00:54:36+02:00
  - First version.
